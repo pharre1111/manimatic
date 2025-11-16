@@ -1,0 +1,2 @@
+# manimatic
+Manimatic
