@@ -2,6 +2,10 @@
 
 Manimatic is an intelligent web application that generates mathematical animations from natural language descriptions. By combining the power of Google's Gemini AI with the Manim animation engine, users can create complex mathematical visualizations without writing code.
 
+
+https://github.com/user-attachments/assets/f1fefca7-a04b-4e00-8895-2a3c36fcbddb
+
+
 ## Overview
 
 - **Natural Language Interface**: Describe animations in plain English and watch them come to life
