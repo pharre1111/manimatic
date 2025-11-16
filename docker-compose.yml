@@ -1,0 +1,52 @@
+services:
+  manimatic-backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.backend
+    container_name: manimatic-backend
+    ports:
+      - "8080:8080"
+    environment:
+      - FLASK_APP=app.py
+      - FLASK_ENV=development
+      - PYTHONUNBUFFERED=1
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - CLOUDINARY_CLOUD_NAME=${CLOUDINARY_CLOUD_NAME}
+      - CLOUDINARY_API_KEY=${CLOUDINARY_API_KEY}
+      - CLOUDINARY_API_SECRET=${CLOUDINARY_API_SECRET}
+      - ENABLE_DOCKER=true
+    volumes:
+      # Mount Docker socket so backend can spawn worker containers
+      - /var/run/docker.sock:/var/run/docker.sock
+      # Logs
+      - ./backend/logs:/app/logs
+      # Jobs (backend and workers share this dir)
+      - ./backend/jobs:/app/jobs
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - manimatic-network
+
+  # Worker image definition (not run by default)
+  manimatic-worker:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.worker
+    image: manimatic-worker:latest
+    # Do not auto-run this container — backend will `docker run --rm manimatic-worker`
+    profiles:
+      - build-only
+    networks:
+      - manimatic-network
+    volumes:
+      - ./backend/jobs:/job/jobs
+      - ./backend/logs:/job/logs
+
+networks:
+  manimatic-network:
+    driver: bridge
